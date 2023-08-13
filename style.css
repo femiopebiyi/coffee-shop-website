@@ -290,7 +290,7 @@ font-weight: 900;
     }
 }
 
-@media screen and (width<755px) {
+@media screen and (width<1085px) {
     *{
         font-size: 1rem;
     }
