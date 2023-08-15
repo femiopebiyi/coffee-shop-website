@@ -8,6 +8,7 @@
 body{
     font-family: "Poppins";
 }
+
 html{
     scroll-behavior: smooth;
     scrollbar-color: #a49af7;
@@ -24,6 +25,7 @@ html{
     height: 15vh;
     align-items: center;
     background-color: #dbd5fb;
+    
 }
 .aboutlist{
     display: flex;
@@ -45,7 +47,7 @@ li{
 }
 
 .ham{
-    display: none;
+    display: flex;
     flex-direction: column;
     gap: 2rem;
     position: absolute;
@@ -70,6 +72,7 @@ span{
     display: flex;
     flex-direction: column;
     gap: 1rem;
+    z-index: 1;
 }
 .clicked{
     display: none;
@@ -121,15 +124,16 @@ p{
     
 }
 .second{
-    height: 100vh;
+    height: 70vh;
     position: relative;
     background-color: #a49af7;
 }
 .info-container{
-    position: absolute;
-    top: 40%;
+    height: 70%;
     display: flex;
     justify-content: space-around;
+    align-items: center;
+    
 }
 .info{
     width: 40%;
@@ -137,10 +141,13 @@ p{
     flex-direction: column;
     align-items: center;
     gap: 1rem;
+    margin-top: 10%;
+
+
 }
 
 #second{
-    
+    margin-top: 10%;
 }
 img{
     width: 400px;
@@ -149,25 +156,31 @@ img{
 
 .brews{
     height: 100vh;
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    gap: 2rem;
+    background-color: #dbd5fb;
 }
+.brewcontainer{
+    height: 200px;
+    
 
+}
+.brews p{
+    text-align: center;
+    margin: 0 5%;
+    margin-top: 10%;
+    line-height: 2;
+}
 .brewcontainer img{
-    width: 300px;
-    height: 300px;
+    width: 100%;
+    height: 90%;
     
 }
 .total{
-    display: flex;
-    flex-direction: row;
-    justify-content: center;
-    gap: 2rem;
-    align-content: center;
-    flex-wrap: wrap;
+    margin-top: 10%;
     
+    width: 100%;
+    display: grid;
+    gap: 1rem;
+    grid-template-columns: repeat(auto-fit, minmax(100px, 1fr));
 }
 .brews h1{
     text-align: center;
@@ -177,17 +190,17 @@ h4{
 }
 .fourth{
     background: white;
+    height: 60vh;
 }
 
 .details{
-    gap: 10rem;
-    right: 20%;
-    top: 20%;
+    display: flex;
+    justify-content: space-around;
+    margin-top: 10%;
 }
 .signup{
     height: fit-content;
     width: 400px;
-    border: 2px solid black;
     display: flex;
     flex-direction: column;
     align-items: center;
@@ -222,12 +235,9 @@ font-family: "Poppins";
 font-weight: 900;
 }
 
+/* media queries */
 
-
-
-
-
-@media screen and (width<762px) {
+@media screen and (width<=1000px) {
     .ham{
         display: flex;
         gap: 2rem;
@@ -235,11 +245,7 @@ font-weight: 900;
     .desktop{
         display: none;
     }
-    .logo{
-        position: absolute;
-        left: 5%;
-    }
-    .span{
+    span{
         position: relative;
     }
     .hamburg{
@@ -247,87 +253,71 @@ font-weight: 900;
         position: absolute;
         top: 70px;
         right: 5%;
-        background: #dbd5fb;
+        background-color: #dbd5fb;
         width: 200px;
         text-align: center;
-        z-index: 1;
     }
-
-    .aboutlink{
-        text-decoration-color: #dbd5fb;
-    }
-    .aboutlink:hover{
-        text-underline-offset: 0.3rem;
-        text-decoration-color: rgb(63,63,63);
-}
-}
-@media screen and (width<1264px) {
-    .details{
-        position: relative;
-        flex-direction: column;
-        align-items: center;
-        right: 0;
-        margin-left: 5%;
-        margin-right: 5%;
-        gap: 1rem;
-    }
-    .fourth{
-        
-    }
-    .signup{
-        margin-bottom: 15%;
-    }
-    img{
-        width: 150px;
-        height: 150px;    
-    }
-    .brewcontainer img{}
-    .drink{
-        flex-direction: column;
-        top: 10%;
-        align-items: center;
-        gap: 1rem;
+    .logo{
+        position: absolute;
+        left: 5%;
     }
 }
 
-@media screen and (width<1085px) {
-    *{
-        font-size: 1rem;
+@media screen and (width>=1000px) {
+    .ham{
+        display: none;
     }
-    .aboutus{
-        position: relative;
-        top: 30%;
-        right: 0;
-        width: 100%;
-        text-align: center;
-    }
-    .brewcontainer img{
-        height: 150px;
-        width: 150px;
+}
+@media screen and (width<1200px) {
+    .total{
+        margin-top: 20%;
     }
     .info{
+        width: 100%;
+        
+    }
+    .info h1{
+        font-size: 1.5rem;
+    }
+    #second{
+        transform: scale(.5);
+    }
+}
+@media screen and (width<1000px) {
+    .aboutus {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        width: 100%;
+        gap: 1.5rem;
+        
+    }
+    .aboutus p, .aboutus h1{
+        text-align: center;
+        margin: 0 5%;
+    }
+        .info {
         width: 100%;
         display: flex;
         flex-direction: column;
         align-items: center;
+        justify-content: center;
         gap: 1rem;
     }
-    .info h1,
-    .info p{
+    .info h1{
         text-align: center;
     }
-    .signup{
-        top: 5%;
+        .info p{
+            text-align: center;
+        }
+        .info-container {
+        height: 100%;
+        display: flex;
+        justify-content: space-around;
+        align-items: center;
     
     }
-    .details img{
-        height: 200px;
-    }
-    input{
-        margin:0 10%;
-    }
-    .brews{
-        height: fit-content;
+    #second{
+        display: none;
     }
 }
-
