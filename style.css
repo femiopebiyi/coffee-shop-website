@@ -320,4 +320,24 @@ font-weight: 900;
     #second{
         display: none;
     }
+    .brews p{
+        line-height: 1;
+    }
+    .details{
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        
+    }
+    .signup{
+        width: 250px;
+        margin-bottom: 30px;
+        padding-bottom: 20px;
+    
+    }
+    .details img{
+        width: 200px;
+        height: 200px;
+        margin-bottom: 30px;
+    }
 }
