@@ -237,7 +237,7 @@ font-weight: 900;
 
 /* media queries */
 
-@media screen and (width<=1000px) {
+@media screen and (width<=1300px) {
     .ham{
         display: flex;
         gap: 2rem;
